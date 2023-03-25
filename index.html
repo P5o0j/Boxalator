@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
+  <style></style>
   <body>
     <div>
       <form name="form">
@@ -41,7 +42,25 @@
               <span id="rangeValue2">1</span>
             </td>
           </tr>
-          <tr></tr>
+          <tr>
+            <td>
+              <div class="btn-group">
+                <div class="button">
+                  <input type="radio" id="btn1" name="button" value="1" />
+                  <label class="btn btn-default" for="a25">Option1</label>
+                </div>
+                <div class="button">
+                  <input type="radio" id="btn2" name="button" value="1.2" />
+                  <label class="btn btn-default" for="a50">Option2</label>
+                </div>
+                <div class="button">
+                  <input type="radio" id="btn3" name="button" value="1.5" />
+                  <label class="btn btn-default" for="a75">Option3</label>
+                </div>
+              </div>
+            </td>
+            <td></td>
+          </tr>
         </table>
         <input type="button" onclick="clickHandler()" value="SUBMIT" />
       </form>
