@@ -16,10 +16,30 @@
   height: 40px;
   position: relative;
   background-color: blue;
+  /* border-radius: 10px; */
+}
+
+.button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .button label,
 .button input {
+  cursor: pointer;
   display: block;
   position: absolute;
   top: 0;
@@ -35,11 +55,87 @@
 
 .button input[type="radio"]:checked + label {
   background: #20b8be;
-  border-radius: 4px;
 }
 
 .button label {
   cursor: pointer;
   z-index: 90;
   line-height: 1.8em;
+}
+.btn-group {
+  border-radius: 4px;
+}
+td {
+  padding: 10px;
+}
+
+/* SLIDER STYLING */
+.main {
+  width: 60%;
+  margin: 14% auto;
+  position: relative;
+}
+
+/* #rooms {
+  -webkit-appearance: none;
+  width: 100%;
+   height: 7px; 
+  border-radius: 3px;
+} */
+
+/* Design slider button */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+   background: #151515; 
+} 
+div {
+  position: absolute;
+}*/
+#rangeValue {
+  /* position: relative;
+  display: block;
+  text-align: center; */
+  font-size: 2em;
+  color: #999;
+  font-weight: 400;
+}
+#rangeValue2 {
+  font-size: 2em;
+  color: #999;
+  font-weight: 400;
+}
+.rangeValue {
+  /* position: relative;
+  display: block; */
+
+  font-size: 2em;
+  color: #999;
+  font-weight: 400;
+}
+.range {
+  width: 100%;
+  /* height: 20px; */
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00fd0a;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -407px 0 0 400px #00fd0a;
 }

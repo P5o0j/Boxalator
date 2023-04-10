@@ -4,17 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <style></style>
   <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quo quos!
+      Similique nulla sint atque qui iusto ut consectetur hic nihil minima
+      facilis quasi maxime libero, aliquam et molestiae dolor.
+    </p>
+    <br />
     <div>
       <form name="form">
         <table>
           <tr>
             <td>
-              <label>Number of Rooms</label>
+              <!-- <label>Number of Rooms</label>
               <input
                 type="range"
                 name="rooms"
@@ -24,11 +30,18 @@
                 value="1"
                 oninput="rangeValue.innerText=this.value"
               /><br />
-              <span>Number of rooms: </span>
+               -->
+               <span class="rangeValue">Rooms: </span>
               <span id="rangeValue">1</span>
+        <Input class="range" type="range" name="rooms" value="1" min="1" max="5" oninput="rangeValue.innerText=this.value" id="rooms"></Input>
+
+    </div>
             </td>
             <td>
-              <label>Number of People</label>
+              <span class="rangeValue">People: </span>
+              <span id="rangeValue2">1</span>
+              <Input class="range" type="range" name="rooms" value="1" min="1" max="5" oninput="rangeValue2.innerText=this.value" id="people"></Input>
+              <!-- <label>Number of People</label>
               <input
                 type="range"
                 name="people"
@@ -39,7 +52,7 @@
                 oninput="rangeValue2.innerText=this.value"
               /><br />
               <span>Number of People: </span>
-              <span id="rangeValue2">1</span>
+              <span id="rangeValue2">1</span> -->
             </td>
           </tr>
           <tr>
@@ -47,19 +60,34 @@
               <div class="btn-group">
                 <div class="button">
                   <input type="radio" id="btn1" name="button" value="1" />
-                  <label class="btn btn-default" for="a25">Option1</label>
+                  <label class="btn btn-default" for="btn1">Option1</label>
                 </div>
                 <div class="button">
                   <input type="radio" id="btn2" name="button" value="1.2" />
-                  <label class="btn btn-default" for="a50">Option2</label>
+                  <label class="btn btn-default" for="btn2">Option2</label>
                 </div>
                 <div class="button">
                   <input type="radio" id="btn3" name="button" value="1.5" />
-                  <label class="btn btn-default" for="a75">Option3</label>
+                  <label class="btn btn-default" for="btn3">Option3</label>
                 </div>
               </div>
             </td>
-            <td></td>
+            <td>
+              <div class="btn-group">
+                <div class="button">
+                  <input type="radio" id="btn4" name="button2" value="1" />
+                  <label class="btn btn-default" for="btn4">Option4</label>
+                </div>
+                <div class="button">
+                  <input type="radio" id="btn5" name="button2" value="1.2" />
+                  <label class="btn btn-default" for="btn5">Option5</label>
+                </div>
+                <div class="button">
+                  <input type="radio" id="btn6" name="button2" value="1.5" />
+                  <label class="btn btn-default" for="btn6">Option6</label>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
         <input type="button" onclick="clickHandler()" value="SUBMIT" />

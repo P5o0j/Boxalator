@@ -7,6 +7,9 @@ function clickHandler() {
   const btn1 = Number(
     document.querySelector('input[name="button"]:checked').value
   );
+  const btn2 = Number(
+    document.querySelector('input[name="button2"]:checked').value
+  );
   console.log(rooms);
   console.log(people);
 
@@ -18,10 +21,11 @@ function clickHandler() {
     elementOne.classList.add("visible");
   } else {
     console.log("need to calculate how many boxes");
-    const newBox = Math.ceil(baseBox * btn1 * (rooms + people));
+    const newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people));
     console.log(`You only need ${newBox} boxes!`);
   }
   console.log("button value " + btn1);
+  console.log("button2 value " + btn2);
 
   // console.log("Rooms: " + rooms);
   // console.log("People: " + people);
@@ -33,3 +37,10 @@ function clickHandler() {
 
   // calculation(rooms, people);
 }
+
+// SLIDER SCRIPT
+function rangeSlide(value) {
+  document.getElementById("rangeValue").innerHTML = value;
+}
+
+// onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"
