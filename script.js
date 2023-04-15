@@ -38,6 +38,14 @@ function clickHandler() {
   // calculation(rooms, people);
 }
 
+async function output(newBox) {
+  const para = document.createElement("p");
+  const node = document.createTextNode(`You need ${newBox} boxes`);
+  para.appendChild(node);
+  const element = document.getElementById("boxAmm");
+  element.appendChild(para);
+}
+
 // SLIDER SCRIPT
 function rangeSlide(value) {
   document.getElementById("rangeValue").innerHTML = value;
