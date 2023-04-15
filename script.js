@@ -1,5 +1,5 @@
 const baseBox = 2;
-const newBox = 0;
+let newBox = 0;
 
 function clickHandler() {
   const rooms = Number(document.getElementById("rooms").value);
@@ -13,7 +13,7 @@ function clickHandler() {
   console.log(rooms);
   console.log(people);
 
-  if (rooms === 1 && people === 1) {
+  if (rooms === 1 && people === 1 && btn1 === true && btn2 === true) {
     console.log(`You only need ${baseBox} boxes!`);
     const elementMain = document.querySelector(".hidden");
     elementMain.classList.add("visible");
@@ -21,11 +21,25 @@ function clickHandler() {
     elementOne.classList.add("visible");
   } else {
     console.log("need to calculate how many boxes");
-    const newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people));
-    console.log(`You only need ${newBox} boxes!`);
+    newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people));
+    // return (newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people)));
   }
+
+  console.log("rooms " + rooms);
+  console.log("people " + people);
   console.log("button value " + btn1);
   console.log("button2 value " + btn2);
+  console.log(baseBox * btn1 * btn2 * (rooms + people));
+  console.log(`You only need ${newBox} boxes!`);
+
+  const para = document.createElement("p");
+  const node2 = `<div>  this is a test div
+</div>`;
+  const node = document.createTextNode(`You need ${newBox} boxes`);
+  para.appendChild(node);
+  document.body.innerHTML = node2;
+  const element = document.getElementById("boxAmm");
+  element.appendChild(para);
 
   // console.log("Rooms: " + rooms);
   // console.log("People: " + people);
@@ -38,13 +52,13 @@ function clickHandler() {
   // calculation(rooms, people);
 }
 
-async function output(newBox) {
-  const para = document.createElement("p");
-  const node = document.createTextNode(`You need ${newBox} boxes`);
-  para.appendChild(node);
-  const element = document.getElementById("boxAmm");
-  element.appendChild(para);
-}
+// async function output(newBox) {
+//   const para = document.createElement("p");
+//   const node = document.createTextNode(`You need ${newBox} boxes`);
+//   para.appendChild(node);
+//   const element = document.getElementById("boxAmm");
+//   element.appendChild(para);
+// }
 
 // SLIDER SCRIPT
 function rangeSlide(value) {
