@@ -15,6 +15,7 @@ function clickHandler() {
 
   if (rooms === 1 && people === 1 && btn1 === true && btn2 === true) {
     console.log(`You only need ${baseBox} boxes!`);
+    return newBox;
     const elementMain = document.querySelector(".hidden");
     elementMain.classList.add("visible");
     const elementOne = document.querySelector(".hidden2");
@@ -22,6 +23,7 @@ function clickHandler() {
   } else {
     console.log("need to calculate how many boxes");
     newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people));
+
     // return (newBox = Math.ceil(baseBox * btn1 * btn2 * (rooms + people)));
   }
 
@@ -32,14 +34,19 @@ function clickHandler() {
   console.log(baseBox * btn1 * btn2 * (rooms + people));
   console.log(`You only need ${newBox} boxes!`);
 
-  const para = document.createElement("p");
-  const node2 = `<div>  this is a test div
-</div>`;
-  const node = document.createTextNode(`You need ${newBox} boxes`);
-  para.appendChild(node);
-  document.body.innerHTML = node2;
-  const element = document.getElementById("boxAmm");
-  element.appendChild(para);
+  document.getElementById("boxAmm").innerHTML = `You need ${newBox} boxes NEW`;
+  const elementMain = document.querySelector(".hidden");
+  elementMain.classList.add("visible");
+  const elementOne = document.querySelector(".hidden2");
+  elementOne.classList.add("visible");
+  // document.getElementById("boxAmm").innerHTML = `${newBox}`;
+  // const para = document.createElement("p");
+
+  // const node = document.createTextNode(`You need ${newBox} boxes`);
+  // para.appendChild(node);
+  // document.body.innerHTML = node2;
+  // const element = document.getElementById("boxAmm");
+  // element.appendChild(para);
 
   // console.log("Rooms: " + rooms);
   // console.log("People: " + people);
